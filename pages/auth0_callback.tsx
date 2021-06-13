@@ -13,7 +13,8 @@ const useStyles = makeStyles(() => ({
 const Auth0CallbackPage = () => {
   const { handleAuthentication } = useAuth();
   useEffect(() => {
-    handleAuthentication();
+    //se quiser passar um objeto abaixo para encaminahr o usuário para uma nova página: { postLoginRoute: "/account" }
+    handleAuthentication({ postLoginRoute: "/account" });
   }, []);
   const classes = useStyles();
 
